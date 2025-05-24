@@ -229,7 +229,7 @@ header .icons a:hover{
 
 
 .products .box-container {
-    background-color: var(--pink); /* Latar belakang sementara */
+    background-color: white; /* Latar belakang sementara */
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
