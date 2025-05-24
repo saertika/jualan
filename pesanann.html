@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesanan Berhasil</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0fff0;
+    }
+
+    h1 {
+      color: #f64c89;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #444;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 5px 0;
+      text-align: center;
+    }
+
+    #daftarPesanan {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px auto;
+      max-width: 400px;
+      text-align: left;
+      font-size: 17px;
+      text-align: center;
+    }
+
+    #daftarPesanan li {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #totalBayar {
+      font-weight: bold;
+      color: #d6006b;
+      font-size: 20px;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #f64c89;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.btn:hover {
+      background-color: #d63a71;
+    }
+
+    canvas {
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: 2px solid pink;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✅ Pesanan Anda Berhasil Dikirim!</h1>
+
+  <canvas id="pesananCanvas" width="400" height="50">
+    Browser Anda tidak mendukung elemen canvas.
+  </canvas>
+
+  <h2>Informasi Pemesan:</h2>
+  <p id="infoNama"></p>
+  <p id="infoAlamat"></p>
+  <p id="infoTelepon"></p>
+  <p id="infoEmail"></p>
+  <p id="infoPembayaran"></p>
+
+  <h2>Rincian Pesanan:</h2>
+  <ul id="daftarPesanan"></ul>
+  <p><strong>Total Pembayaran:</strong> Rp <span id="totalBayar">0</span></p>
+
+  <a href="index.html" class="btn">⬅ Kembali ke Beranda</a>
+
+  <script>
+    // Menggambar teks pada canvas
+    const canvas = document.getElementById('pesananCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = "pink";
+    ctx.font = "bold 22px Arial";
+    ctx.fillText("✔ Terima kasih atas pesanan Anda!", 10, 30);
+
+    // Menampilkan data pemesan dan keranjang
+    const pemesan = JSON.parse(localStorage.getItem("dataPemesan")) || {};
+    const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+    const total = localStorage.getItem("totalHarga") || 0;
+
+    document.getElementById("infoNama").textContent = "Nama: " + pemesan.nama;
+    document.getElementById("infoAlamat").textContent = "Alamat: " + pemesan.alamat;
+    document.getElementById("infoTelepon").textContent = "No HP: " + pemesan.telepon;
+    document.getElementById("infoEmail").textContent = "Email: " + pemesan.email;
+    document.getElementById("infoPembayaran").textContent = "Metode Pembayaran: " + pemesan.pembayaran;
+
+    const daftarPesanan = document.getElementById("daftarPesanan");
+    keranjang.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = `${item.nama}`;
+      daftarPesanan.appendChild(li);
+    });
+
+    document.getElementById("totalBayar").textContent = total;
+  </script>
+
+</body>
+</html>

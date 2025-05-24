@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keranjang Belanja</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="keranjang.js"></script>
+  
+  <style>
+    .form-group {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .form-group select,
+    .form-group .button {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    /* Ini styling khusus untuk input jumlah */
+    #jumlah-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #jumlah {
+      width: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">Keranjang Belanja</h2>
+    
+    <div class="form-group">
+      <select id="itemSelect">
+        <option value="0">Pilih Produk</option>
+        <option value="90000">Rose - Rp 90.000</option>
+        <option value="58500">Kaktus - Rp 58.500</option>
+        <option value="135000">Kaktus - Rp 135.000</option>
+        <option value="180000">Sunflower - Rp 180.000</option>
+        <option value="450000">Anggrek - Rp 450.000</option>
+        <option value="405000">Sepatu - Rp 405.000</option>
+        <option value="360000">Lily - Rp 360.000</option>
+        <option value="225000">Melati - Rp 225.000</option>
+        <option value="270000">Sakura - Rp 270.000</option>
+      </select>
+
+      <button class="button" onclick="tambahKeKeranjang()">Tambah</button>
+    </div>
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Produk</th>
+          <th>Harga</th>
+          <th>Jumlah</th>
+          <th>Total</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="keranjangBody"></tbody>
+    </table>
+
+    <h3>Total Bayar: Rp <span id="totalHarga">0</span></h3>
+  </div>
+  <section>
+    <a href="pesanann.html" class="btn" onclick="simpanPesanan()">Selesai</a>
+
+<script>
+function simpanPesanan() {
+  // Sudah disimpan otomatis saat updateTabel() di jskrjng.js
+  // Jadi tidak perlu menyimpan ulang di sini
+}
+</script>
+
+  </section>
+</body>
+</html>

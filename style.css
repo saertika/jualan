@@ -1,0 +1,732 @@
+:root{
+    --pink:#e84393;
+}
+
+*{
+    margin;0 padding: ;padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, tahoma, sans-serif;
+    outline:none; border:none;
+    text-transfrom: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    overflow-x: hidden;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, .05);
+    
+}
+
+.heading span{
+    color: var(--pink);
+    
+}
+
+.btn{
+    background: #ea5ca3;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 8px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn:hover{
+   background: #333;
+   text-decoration: underline; 
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background: #fff;
+    padding:32px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, .1);
+    
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+header .logo span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 16px;
+    color: #666;
+    text-decoration: none;
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+}
+.home .content h3{
+    font-size: 5rem;
+
+}
+
+.home .content span{
+    font-size: 2rem;
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #333
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: var(--pink);
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background:url(ori.jpg) repeat-x ;
+    background-size:  50%  100%;
+    background-position: center;
+    border: .1rem solid rgb(0, 0, .1);
+    animation: gerakBackground 60s linear infinite;
+}
+
+
+@keyframes gerakBackground{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 100% 0;
+    }
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color:var(--pink);
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding:1rem 0;
+    line-height: 1.5;  
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;;
+    padding-bottom: 3rem;
+    background-color: #c43778;
+}
+
+.about .row .vidio-container{
+    flex: 2rem 0;
+    position: relative;
+}
+
+.about .row .vidio-containe video{
+    width: 100%;
+    border: .1rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .vidio-container h3{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: hsl(133, 65%, 50%);
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.about .content p {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Biar muncul satu per satu, tambahkan delay */
+
+.about .content p{
+    animation-delay: 0.3s;
+}
+
+
+#gambar {
+            width: 300px;
+            height: 200px;
+            transition: 0.3s ease;
+        }
+  
+
+
+
+.products .box-container {
+    background-color: var(--pink); /* Latar belakang sementara */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgb(0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem solid rgb(0, 0, .1);
+    position: relative;
+}
+
+.products .box-container .box .discount{
+    position: absolute;
+    top:1rem; left:1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: black;
+    background: rgba(255, 51, 153, .05);
+    z-index: 1;
+    border-radius: 5rem;
+}
+
+.products .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img{
+    height: 25rem;
+}
+
+.products .box-container .box .image img{
+    transform: scale(1.1);
+}
+
+.products .box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem; left:0; right: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons{
+    bottom:0;
+}
+
+.products .box-container .box .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: var(--pink);
+    color:white;
+}
+
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+    text-decoration: none;
+}
+
+.products .box-container .box  .image .icons a:hover{
+background: #333;
+}
+
+.products .box-container .box .content{
+   padding: 2rem;
+   text-align: center;
+}
+
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.products .box-container .box .content .price {
+    font-size: 2.5rem;
+    color:#eee;
+    font-weight: bolder;
+    padding-top: -1rem;
+    color: var(--pink);
+    
+}
+
+.products .box-container  .box. .content .price span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+    
+}
+.products .box-container .box .content .price {
+    font-size: 2.5rem;
+    color: var(--pink); 
+    font-weight: bolder;
+}
+
+.products .box-container .box .content .price span {
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through; 
+}
+
+.review .row{
+    display: flex;
+    flex: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: var(--pink);
+
+}
+ .review .row form{
+    flex: 1 1 40rem;
+    padding: 20px;
+    box-shadow: 0 .5rem 1.5rem rgb(0, 0, .1);
+    border: .1rem solid rgb(0, 0, .1);
+    background: #fff;
+    border-radius: 1px;
+ }
+
+ .review .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-decoration: none;
+    border: .1rem solid rgb(0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+  
+ }
+
+ .review .row .image{
+    flex: 1 1 40rem;
+ }
+
+ .review .row .image img{
+    width: 100%;
+ }
+
+ .review .row form textarea{
+    height: 15rem;
+    resize: none;
+ }
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: var(--pink);
+    float: left;
+    text-align: center;
+    margin: 0 auto;  /* Pastikan seluruh container terpusat */
+    margin-left: 10%; /* Memberikan margin kiri untuk menggeser ke kanan */
+}
+
+.footer .box-container .box{
+  
+   padding: 20px;
+   box-sizing: border-box; 
+}
+
+.footer .box-container .box  a{
+    color:#333;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 10px;
+}
+
+.footer .box-container .box  h3{
+    display: block;
+    color:#666;
+    font-size: 20px;
+    margin:px 0; 
+}
+
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+    
+}
+
+/* ===== ABOUT, PRODUCTS, REVIEW, FOOTER omitted for brevity (sama dengan sebelumnya) ===== */
+  
+  /* ===== KERANJANG BELANJA ===== */
+.container {
+    max-width: 1000px;
+    margin: 100px auto 50px auto;
+    padding: 20px;
+    background-color: var(--gray);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  
+.container h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--dark);
+    margin-bottom: 30px;
+  }
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+  }
+  
+  table thead {
+    background-color: var(--pink);
+    color: white;
+  }
+  
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  button {
+    background-color: var(--pink);
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #c43778;
+  }
+  
+  .container h3 {
+    text-align: right;
+    font-size: 2rem;
+    color: var(--dark);
+  }
+
+  .comment {
+    background: #fff;
+    padding: 4rem 2rem;
+}
+
+.comment .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.comment .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.comment .box-container .box:hover {
+    transform: translateY(-0.5rem);
+}
+
+.comment .box-container .box .stars {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.comment .box-container .box .stars i {
+    color: var(--pink);
+    font-size: 2rem;
+}
+
+.comment .box-container .box p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.comment .box-container .box .fa-quote-right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: #eee;
+}
+
+.comment .box-container .box .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.comment .box-container .box .user img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment .box-container .box .user-info h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0;
+}
+
+.comment .box-container .box .user-info span {
+    font-size: 1.3rem;
+    color: #999;
+}
+
+:root {
+    --pink: #e84393;
+  }
+  
+  .comment {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+  }
+  
+  .comment .heading {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+  
+  .comment .heading span {
+    color: var(--pink);
+  }
+  
+  .comment .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: rem;
+  }
+  
+  .comment .box {
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .comment .box:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .comment .box .stars {
+    margin-bottom: 1rem;
+  }
+  
+  .comment .box .stars i {
+    color: var(--pink);
+    font-size: 1.8rem;
+  }
+  
+  .comment .box p {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .comment .box .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  
+  .comment .box .user img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .comment .box .user-info h3 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .comment .box .user-info span {
+    font-size: 1.3rem;
+    color: #999;
+  }
+  
+  .comment .box .fa-quote-right {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 3rem;
+    color: #eee;
+  }
+
+  .bunga {
+    width: 25px;
+    height: 25px;
+    background-color: brown;
+    border-radius: 50%;
+    touch-action: -20px;
+    position: absolute;
+    animation: hujan 5s infinite;
+   }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+
+   
+   @keyframes hujan {
+    0% {
+    transform: translateY(0);
+    }
+    100% {
+    transform: translateY(100vh);
+    }
+   }
+   
+   
+   .bunga.bunga-1 {
+    clip-path: polygon(50% 0%, 63% 37%, 100% 50%, 63% 63%, 50% 100%, 37% 63%, 0% 50%, 37% 37%);
+    background-color: #f06292;
+   }
+   
+   
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+        
+            flex-direction: column; 
+    
+    }
+    header{
+        padding: 2rem;
+    }
+    
+    section{
+     padding: 2rem;
+    }
+
+    .home{
+      background-position: left;
+    }
+}
+@media (max-width:768px) {
+   header .navbar{
+   
+    position:absolute;
+    top:100%; left:0; right: 0;
+    background: #eee ;
+    border-top: .1rem solid rgb(0, 0, 1);
+
+   }
+   @media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+   }  
+
+}
+
+
+
+

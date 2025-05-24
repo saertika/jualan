@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Pemesanan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a4a4a;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .form-box {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .form-box label {
+      font-weight: 600;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .form-box input[type="text"],
+    .form-box input[type="email"],
+    .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .form-box textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .form-box input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    .form-box .btn-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-box button {
+      padding: 10px 20px;
+      background-color: #f64c89;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-box button:hover {
+      background-color: #d63a71;
+    }
+
+    .image-box img {
+      max-width: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Form</h1>
+
+  <div class="container">
+    <div class="form-box">
+      <form id="formPemesan">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan Nama" required>
+
+        <label for="address">Alamat Pengiriman</label>
+        <textarea id="address" name="address" placeholder="Masukkan Alamat Pengiriman" required></textarea>
+
+        <label for="phone">Nomor Telepon</label>
+        <input type="text" id="phone" name="phone" placeholder="Masukkan Nomor Telepon" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+
+        <label>Metode Pembayaran:</label>
+        <input type="radio" name="payment" value="Transfer Bank" required> Transfer Bank<br>
+        <input type="radio" name="payment" value="COD"> Bayar di Tempat (COD)<br>
+        <input type="radio" name="payment" value="Kartu Kredit"> Kartu Kredit/Debit<br><br>
+
+        <div class="btn-group">
+          <button type="submit">Tambah ke Keranjang</button>
+          <button type="reset" style="background-color:#d9d9d9; color:#000;">Ulangi</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="image-box">
+      <img src="cewek.jpg" alt="Ilustrasi Menyiram Bunga">
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("formPemesan").onsubmit = function(e) {
+      e.preventDefault();
+      const formData = {
+        nama: document.getElementById("name").value,
+        alamat: document.getElementById("address").value,
+        telepon: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        pembayaran: document.querySelector('input[name="payment"]:checked').value
+      };
+      localStorage.setItem("dataPemesan", JSON.stringify(formData));
+      window.location.href = "keranjang.html";
+    };
+  </script>
+
+</body>
+</html>

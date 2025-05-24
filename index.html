@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="audio.js"></script>
+    
+    
+      
+      
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const sections = document.querySelectorAll("section");
+        
+          sections.forEach(section => {
+            for (let i = 0; i < 5; i++) {
+              const bunga = document.createElement("div");
+              bunga.classList.add("bunga", "bunga-1");
+        
+              bunga.style.left = Math.random() * 100 + "vw";
+              bunga.style.animationDuration = 2 + Math.random() * 3 + "s";
+        
+              section.appendChild(bunga);
+            }
+          });
+        });
+        </script>
+         
+    
+   
+</head>
+<body>
+    <section>
+       
+        <section>
+       
+            <div class="bunga bunga-1" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="bunga bunga-1" style="left: 20%; animation-delay: 1s;"></div>
+            <div class="bunga bunga-1" style="left: 30%; animation-delay: 0.5s;"></div>
+            <div class="bunga bunga-1" style="left: 40%; animation-delay: 2s;"></div>
+            <div class="bunga bunga-1" style="left: 50%; animation-delay: 1.5;"></div>
+            <div class="bunga bunga-1" style="left: 60%; animation-delay: 3s;"></div>
+            <div class="bunga bunga-1" style="left: 70%; animation-delay: 2.3s;"></div>
+            <div class="bunga bunga-1" style="left: 80%; animation-delay: 4s;"></div>
+            <div class="bunga bunga-1" style="left: 90%; animation-delay: 3.5s;"></div>        
+        </section>
+        
+       
+        
+    </section>
+     </section>
+          <audio id="musik" loop>
+           <source src="with.mp3" type="audio/mp3">
+            Browser Anda tidak mendukung audio.
+        </audio>
+     </section>
+   
+    <header>
+       <a href="#"  class="logo">Flo<span>wer</span></a>
+                  
+                <nav class="navbar">
+                 <a href="#home">Beranda</a></li>
+                  <a href="#about">Tentang Kami</a></li>
+                  <a href="#product">Produk</a></li>
+                  <a href="form2.html">Form</a></li> 
+                  <a href="#contact">Kontak</a></li>
+                  <a href="komentar.html">Komentar</a></li>
+                 
+                  
+
+                  
+                  
+                </nav>
+                
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="keranjang.html" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-user"></a>
+                </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Fresh Flower</h3>
+            <span>Beuty and smart flower</span>
+            <p>Bunga kami adalah pilihan terbaik untuk Anda! Kami menyediakan bunga segar berkualitas tinggi yang langsung dari kebun ke tangan Anda. Dengan desain rangkaian bunga yang unik dan kreatif, kami membuat setiap momen menjadi lebih indah dan berkesan. Bunga kami juga dirawat dengan baik untuk memastikan kesegaran dan keawetan. Kami berkomitmen untuk memberikan pelayanan yang ramah dan profesional untuk memenuhi kebutuhan Anda.?</p>
+            <a href="#" class="btn">belanja sekarang</a>
+        </div>
+       
+    </section>
+    
+    
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span> me </h1>
+
+        <div class="row">
+
+            <div class="vidio-container">
+                <img id="gambar" src="wo.jpg" alt="Gambar 1">
+                <h3>Best Flower Seller</h3>
+
+                <script>
+                  const gambar = document.getElementById('gambar');
+                
+                  // Ganti dengan path gambar kamu sendiri
+                  const gambar1 = 'wo.jpg';
+                  const gambar2 = 'etalase.jpg';
+                  
+                
+                  let sudahGanti = false;
+                
+                  gambar.addEventListener('click', function() {
+                    if (!sudahGanti) {
+                      gambar.src = gambar2;
+                      sudahGanti = true;
+                    } else {
+                      gambar.src = gambar1;
+                      sudahGanti = false;
+                    }
+                  });
+                </script>  
+            </div>
+            <div class="content">
+                <h3>Kenapa pilih <span>Kami</span>?</h3>
+                <p>Nama Toko Bunga Kam didirikan pada 2013 dengan visi untuk membawa keindahan bunga ke dalam kehidupan sehari-hari. Kami percaya bahwa bunga memiliki kekuatan untuk mengungkapkan perasaan dan membuat hidup lebih berwarna. Dengan pengalaman dan dedikasi, kami berkomitmen untuk memberikan kualitas terbaik dan pelayanan yang ramah kepada pelanggan kami."</p>
+              
+            </div>
+        </div>
+
+    </section>
+   
+
+    <section class="products" id="product">
+        <h1 class="heading">List <span>products</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    
+                    <a href="deskripsi.html"></li>
+                        <img src="sepatu.jpeg" alt="404"> 
+                    </a>
+                  
+                    
+
+                </div>
+                <div class="content">
+                    <h3>Rose</h3>
+                    <div class="price"> Rp90.000 <span>Rp100.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <a href="deskripsi.html"></li>
+                    <img src="black.jpeg" alt=""> 
+                    </a>
+                   
+                    
+
+                </div>
+                <div class="content">
+                    <h3>Kaktus</h3>
+                    <div class="price"> Rp58.500 <span>Rp65.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <a href="deskripsi.html"></li>
+                    <img src="cactus.jpeg" alt="">
+                    </a> 
+                   
+                    
+
+                </div>
+                <div class="content">
+                    <h3>Kaktus</h3>
+                    <div class="price"> Rp135.000 <span>Rp150.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="sun.jpg" alt=""> 
+                    <a href="deskripsi.html"></li>
+                        </a>
+                    
+
+                </div>
+                <div class="content">
+                    <h3>Sun</h3>
+                    <div class="price"> Rp180.000 <span>Rp200.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <a href="deskripsi.html"></li>
+                    <img src="anggrek.jpg" alt="">
+                    </a> 
+                  
+
+                </div>
+                <div class="content">
+                    <h3>Angrek</h3>
+                    <div class="price"> Rp450.000 <span>Rp500.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <a href="deskripsi.html"></li>
+                    <img src="osee.jpeg" alt=""> 
+                    </a>
+                    
+
+                </div>
+                <div class="content">
+                    <h3>Sepatu</h3>
+                    <div class="price"> Rp405.000 <span>Rp450.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <a href="deskripsi.html"></li>
+                    <img src="rose.jpeg" alt=""> 
+                    </a>
+                   
+
+                </div>
+                <div class="content">
+                    <h3>Lily</h3>
+                    <div class="price"> Rp360.000 <span>Rp400.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <a href="deskripsi.html"></li>
+                    <img src="tulip.jpeg" alt=""> 
+                    </a>
+                    
+
+                </div>
+                <div class="content">
+                    <h3>Melati</h3>
+                    <div class="price"> Rp225.000 <span>Rp250.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <a href="deskripsi.html"></li>
+                    <img src="buket.jpeg" alt=""> 
+                    </a>
+                  
+                    
+
+                </div>
+                <div class="content">
+                    <h3>Sakura</h3>
+                    <div class="price"> Rp270.000 <span>Rp3000.000</span></div> 
+                        
+                   
+                    
+                </div>
+
+            </div>
+
+            
+        
+        
+        </div>
+   
+            
+
+         
+
+         
+    
+  
+ 
+  <section class="footer"  id="contact">
+    <h1 class="heading">Contact <span>Us</span></h1>
+    <div class="box-container">
+         <div class="box">
+         <h3>Email</h3>
+         <a href="#">flower2gmail.com</a>
+        </div>
+
+    </div>
+    <div class="box-container">
+        <div class="box">
+        <h3>Telp/Sms</h3>
+        <a href="#">O8******</a>
+       </div>
+
+   </div>
+   <div class="box-container">
+    <div class="box">
+    <h3>Alamat</h3>
+    <a href="#">JL.Mawar no 2</a>
+   </div>
+
+</div>
+<div class="box-container">
+    <div class="box">
+    <h3>WA</h3>
+    <a href="#">O8***********</a>
+   </div>
+
+</div>
+   </section>
+
+   
+
+
+</body>
+</html>
